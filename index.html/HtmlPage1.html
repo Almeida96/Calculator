@@ -3,14 +3,15 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
-        <title>calculator using html, css, js</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Calculator</title>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
         <table class="calc">
             <tr>
                 <td colspan="3" class="outputtext">
-                    <input class="display-box" type="text" id="result" disabeld />
+                    <input class="display-box" type="text" id="result" aria-label="Expression" aria-describedby="status" maxlength="500" autocomplete="off" spellcheck="false" />
                 </td>
                 <!-- clearScreen() function clear all the values-->
                 <td>
@@ -141,6 +142,8 @@
                 </td>
             </tr>
         </table>
-        <script type="text/javascript" src="./script.js"></script>
+        <p id="status" role="status" aria-live="polite"></p>
+        <script src="./arithmetic.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>
